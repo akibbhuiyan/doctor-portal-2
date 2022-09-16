@@ -1,0 +1,17 @@
+.section-header{
+    position: relative;
+}
+
+.section-header::before {
+	content: '';
+	position: absolute;
+	background-image: url(../../../images/quote.png);
+	background-position: right -7px;
+	width: 122%;
+	height: 130%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}

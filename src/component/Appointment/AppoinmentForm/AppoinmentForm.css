@@ -1,0 +1,12 @@
+.form-group input, .form-group select {
+	width: 100%;
+	margin-bottom: 14px;
+	padding: 8px 11px;
+	border-radius: 10px;
+	border: 1px solid #c1b7b7;
+	color: #747474;
+	background-color: transparent;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+  }

@@ -1,0 +1,5 @@
+.MuiGrid-item {
+	display: flex !important;
+	flex-direction: column !important;
+	justify-content: center !important;
+}
