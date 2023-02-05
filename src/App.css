@@ -1,10 +1,13 @@
-.text-brand{
+.text-brand {
   color: #1cc7c1;
 }
-.btn-brand{
-  background-image: linear-gradient(75deg,#19D3AE,#0fcfec);
+.btn-brand {
+  background-image: linear-gradient(75deg, #19d3ae, #0fcfec);
   border-color: transparent;
   text-transform: uppercase;
   font-weight: 600;
+  color: #fff;
+}
+.homeNav .navbar-nav .nav-link.homeNavBlack {
   color: #fff;
 }
