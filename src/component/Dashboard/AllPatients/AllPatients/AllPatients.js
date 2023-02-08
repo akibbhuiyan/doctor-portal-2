@@ -12,8 +12,8 @@ const AllPatients = () => {
   return (
     <div className="container-fluid row">
       <Sidebar />
-      <div className="col-md-10 p-4 pr-5">
-        <h5 className="text-brand">All Patient</h5>
+      <div className="col-md-10 p-0 pr-5">
+        <h3 className="text-brand text-center">All Patient</h3>
         <AppointmentDataTable appointments={appointments} />
       </div>
     </div>

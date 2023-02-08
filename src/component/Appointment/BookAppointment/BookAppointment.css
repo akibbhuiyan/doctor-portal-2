@@ -1,0 +1,92 @@
+abbr[title] {
+  text-decoration: none !important;
+}
+.availableservice {
+  margin-top: 50px;
+}
+.mediacttreatment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.service-app {
+  box-shadow: 3px 4px 10px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+  padding: 21px 87px;
+  margin: 31px 0;
+  cursor: pointer;
+}
+.service-app h2 {
+  font-size: 19px;
+  color: #19d3ae;
+}
+.mainBtn.btn.btn-info {
+  background: linear-gradient(90deg, #19d3ae -38.67%, #0fcfec 129.78%);
+  color: #fff;
+}
+
+.css-yiavyu-MuiBackdrop-root-MuiDialog-backdrop {
+  background-color: rgba(0, 0, 0, 0.19) !important;
+}
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation24.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.css-1t1j96h-MuiPaper-root-MuiDialog-paper {
+  width: 500px;
+  border-radius: 14px;
+  box-shadow: 0px 11px 15px -7px rgba(242, 242, 242, 0.2),
+    0px 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0px 9px 46px 8px rgba(227, 218, 218, 0.12);
+}
+.popupForm {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  align-items: center;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.popupForm input {
+  padding: 6px 13px;
+  border-radius: 10px;
+  border: 1px solid #cfcfcf;
+  color: #cfcfcf;
+  width: 80%;
+}
+input:focus {
+  color: #000;
+}
+.popupForm input[type="submit"] {
+  background-color: #3a4256;
+  color: #fff;
+}
+
+.popupForm input[name="date"]:disabled,
+.popupForm input[name="time"]:disabled {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+.main-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #19d3ae;
+}
+.main-subtitle {
+  font-size: 31px;
+  font-weight: 400;
+  margin-bottom: 45px;
+  color: #3a4256;
+}
+@media (min-width: 768px) {
+  .chairpic {
+    width: 102%;
+  }
+}
+@media (min-width: 576px) {
+  .react-calendar {
+    width: 400px;
+
+    padding: 13px;
+  }
+}

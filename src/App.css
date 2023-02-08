@@ -11,3 +11,16 @@
 .homeNav .navbar-nav .nav-link.homeNavBlack {
   color: #fff;
 }
+.login-btn {
+  margin-right: 3rem;
+  padding: 0.5rem 1rem !important;
+  background-color: #fff;
+  color: #000;
+  display: block;
+  border-radius: 31px;
+}
+.login-btn:hover {
+  background-color: #000;
+  color: #fff;
+  transition: 0.3s all;
+}

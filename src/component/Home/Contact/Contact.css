@@ -1,15 +1,20 @@
-.contact{
-    background-image: url(../../../images/appointment-bg.png);
-    position: relative;
-    z-index: 1;
+.contact {
+  background-image: url(../../../images/appointment-bg.png);
+  position: relative;
+  z-index: 1;
 }
-.contact::before{
-    position: absolute;
-    content: '';
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(12,11,27);
-    opacity: 0.9;
-    z-index: -1;
+.contact::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(12, 11, 27);
+  opacity: 0.9;
+  z-index: -1;
+}
+.form-group .sub-btn {
+  padding: 6px 48px;
+  border-radius: 10px;
+  font-size: 20px;
 }

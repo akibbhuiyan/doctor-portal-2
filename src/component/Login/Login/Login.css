@@ -1,5 +1,30 @@
 .MuiGrid-item {
-	display: flex !important;
-	flex-direction: column !important;
-	justify-content: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+.devide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  width: 77%;
+}
+.devide span {
+  width: 42%;
+  height: 1px;
+  background-color: #000;
+  margin-top: -14px;
+}
+.devide p {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.googleLogin {
+  background-color: transparent;
+  width: 77%;
+  padding: 15px 0;
+  border: 1px solid #3a4256;
+  border-radius: 10px;
 }

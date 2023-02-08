@@ -1,16 +1,21 @@
 .header-container {
-    height:100%;
-    position:relative;
-    background-image: url('../../../images/bg.png');
-    background-size: cover;
+  height: 100%;
+  position: relative;
+  background-image: url("../../../images/bg.png");
+  background-size: cover;
 }
-.header-container::after{
-    height:100%;
-    content:' ';
-    position: absolute;
-    top: 0;
-    width: 30%;
-    z-index: -50;
-    right: 0;
-    background-color: #3a4256;
+.header-container::after {
+  height: 100%;
+  content: " ";
+  position: absolute;
+  top: 0;
+  width: 30%;
+  z-index: -50;
+  right: 0;
+  background-color: #3a4256;
+}
+.logo {
+  font-weight: 700;
+  font-size: 27px;
+  padding-left: 102px;
 }

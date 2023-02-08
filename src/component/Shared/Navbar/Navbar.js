@@ -1,17 +1,20 @@
 import React from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { AuthContext } from "../../Context/UserContext";
+import { RiLogoutBoxLine } from "react-icons/ri";
 const Navbar = (props) => {
   const homeNav = props.used;
+  const { user, logOut } = useContext(AuthContext);
   return (
     <div className={homeNav}>
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+      <nav className="navbar navbar-expand-lg">
+        <div className="container-fluid">
           <Link to="/" className="navbar-brand">
-            Doctor Portal
+            <h3 className="logo"> Doctor Portal</h3>
           </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -19,48 +22,54 @@ const Navbar = (props) => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item">
                 <Link
                   to="/"
-                  class="nav-link me-5 mr-5 active"
+                  className="nav-link me-5 mr-5 active"
                   aria-current="page"
-                  href="#"
                 >
                   Home
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/" class="nav-link me-5 mr-5" href="#">
-                  About
+              <li className="nav-item">
+                <Link to="/appointment" className="nav-link me-5 mr-5">
+                  Appointment
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link
-                  to="/doctor/dashboard"
-                  class="nav-link me-5 mr-5"
-                  href="#"
-                >
+              <li className="nav-item">
+                <Link to="/doctor/dashboard" className="nav-link me-5 mr-5">
                   Dashboard
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/" class="nav-link me-5 mr-5 homeNavBlack" href="#">
-                  Admin
-                </Link>
-              </li>
-              <li class="nav-item">
-                <Link to="/" class="nav-link me-5 mr-5 homeNavBlack" href="#">
+
+              <li className="nav-item">
+                <Link to="/Blog" className="nav-link me-5 mr-5 homeNavBlack">
                   Blog
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link to="/" class="nav-link me-5 mr-5 homeNavBlack" href="#">
+              <li className="nav-item">
+                <Link
+                  to="/Contact "
+                  className="nav-link me-5 mr-5 homeNavBlack"
+                >
                   Contact Us
                 </Link>
+              </li>
+              <li className="nav-item">
+                {user ? (
+                  <Link to="# " className="login-btn me-0 " onClick={logOut}>
+                    <RiLogoutBoxLine />
+                    {user.displayName}
+                  </Link>
+                ) : (
+                  <Link to="/login " className=" px-5 login-btn me-3 ">
+                    LogIn
+                  </Link>
+                )}
               </li>
             </ul>
           </div>

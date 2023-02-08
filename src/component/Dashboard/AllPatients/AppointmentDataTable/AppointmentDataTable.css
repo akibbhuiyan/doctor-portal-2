@@ -1,0 +1,6 @@
+.user-table:nth-child(2n + 1) {
+  background-color: #13d1d3;
+}
+.user-table:nth-child(2n) {
+  background-color: #7cb0b0;
+}

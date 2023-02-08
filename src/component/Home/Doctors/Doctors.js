@@ -19,8 +19,8 @@ const Doctors = () => {
           Our Doctors
         </h5>
         <div className="row mt-5">
-          {doctorInfo.map((doctor) => (
-            <Doctor doctor={doctor} />
+          {doctorInfo.map((doctor, idx) => (
+            <Doctor doctor={doctor} key={idx} />
           ))}
         </div>
       </div>

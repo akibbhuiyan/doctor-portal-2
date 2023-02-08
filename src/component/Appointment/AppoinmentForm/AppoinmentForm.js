@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Modal from "react-modal";
 import { useForm } from "react-hook-form";
 import "./AppoinmentForm.css";
+import { toast } from "react-toastify";
+import { AuthContext } from "../../Context/UserContext";
 const customStyles = {
   content: {
     top: "50%",
@@ -14,6 +16,8 @@ const customStyles = {
 };
 Modal.setAppElement("#root");
 const AppoinmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
+  const { user } = useContext(AuthContext);
+
   const {
     register,
     handleSubmit,
@@ -22,17 +26,23 @@ const AppoinmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
   const onSubmit = (data) => {
     data.service = appointmentOn;
     data.date = date.toLocaleDateString();
+    data.email = user?.email;
     data.created = new Date().toLocaleDateString();
     fetch("https://doctor-portal2-server.vercel.app/addAppoinment", {
       method: "POST",
-      headers: { "content-type": "application/json" },
+      headers: {
+        "content-type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
       .then((succes) => {
-        if (succes) {
+        if (succes.acknowledged) {
           closeModal();
-          alert("Appoinment Created SuccessFully");
+          toast("Appoinment Created SuccessFully");
+        } else {
+          toast.error(succes.message);
         }
       });
   };
@@ -67,6 +77,7 @@ const AppoinmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
             <input
               {...register("email", { required: true })}
               placeholder="Email"
+              value={user?.email}
             />
             {errors.email && <span>Email is required</span>}
           </div>
