@@ -28,7 +28,6 @@ const Login = () => {
     sucess: false,
     error: "",
   });
-  console.log(loginData);
   let navigate = useNavigate();
   const handleLoginSubmit = (e) => {
     if (newUser && loginData.email && loginData.password) {

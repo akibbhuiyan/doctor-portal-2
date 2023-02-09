@@ -1,7 +1,6 @@
 import React from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 const Doctor = ({ doctor }) => {
-  console.log(doctor);
   return (
     <div className="col-md-4">
       <img src={doctor.image} alt="" className="mx-3 w-100" />

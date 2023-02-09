@@ -20,7 +20,6 @@ const Contact = () => {
     })
       .then((res) => res.json())
       .then((succes) => {
-        console.log(succes);
         if (succes.status === 200) {
           toast("Message send successfully");
         } else {

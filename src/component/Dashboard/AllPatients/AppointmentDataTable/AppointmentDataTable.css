@@ -4,3 +4,9 @@
 .user-table:nth-child(2n) {
   background-color: #7cb0b0;
 }
+.table thead {
+  background-color: #5a7777;
+}
+.table thead tr th {
+  color: #fff !important;
+}

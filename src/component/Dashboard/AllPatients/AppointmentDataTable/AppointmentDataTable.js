@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "./AppointmentDataTable.css";
 const AppointmentDataTable = ({ appointments }) => {
-  const navigate = useNavigate();
   const handleDelete = (id) => {
     fetch(`https://doctor-portal2-server.vercel.app/deleteUser?id=${id}`)
       .then((response) => response.json)
@@ -27,16 +26,20 @@ const AppointmentDataTable = ({ appointments }) => {
             Gender
           </th>
           <th className="text-secondary" scope="col">
-            Age
+            Date
           </th>
           <th className="text-secondary" scope="col">
-            Weight
+            Appointment For
           </th>
+
           <th className="text-secondary" scope="col">
             Phone
           </th>
           <th className="text-secondary" scope="col">
             Email
+          </th>
+          <th className="text-secondary" scope="col">
+            Action
           </th>
         </tr>
       </thead>
@@ -46,8 +49,8 @@ const AppointmentDataTable = ({ appointments }) => {
             <td>{index + 1}</td>
             <td>{appointment.name}</td>
             <td>{appointment.gender}</td>
-            <td>{appointment.age}</td>
-            <td>{appointment.weight}kg</td>
+            <td>{appointment.date}</td>
+            <td>{appointment.service}</td>
             <td>{appointment.phoneNumber}</td>
             <td>{appointment.email}</td>
             <td>

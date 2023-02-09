@@ -30,7 +30,6 @@ const AppoinmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
     data.date = format(date, "PP");
     data.email = user?.email;
     data.created = new Date().toLocaleDateString();
-    console.log(data);
     fetch("https://doctor-portal2-server.vercel.app/addAppoinment", {
       method: "POST",
       headers: {
