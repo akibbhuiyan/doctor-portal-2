@@ -8,13 +8,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import UserContext from "./component/Context/UserContext";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <UserContext>
-        <App />
-      </UserContext>
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <UserContext>
+      <App />
+    </UserContext>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

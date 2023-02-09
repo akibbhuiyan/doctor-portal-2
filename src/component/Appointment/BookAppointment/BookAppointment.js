@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { bookingData, MedicalService } from "../../../SeviceData";
 import BookingCard from "../BookingCard/BookingCard";
-
+import { format } from "date-fns";
 import "./BookAppointment.css";
 const BookAppointment = ({ selectedDate }) => {
-  const onlyDate = `${selectedDate.getMonth()}-${selectedDate.getDate()}-${selectedDate.getFullYear()}`;
+  // const onlyDate = `${selectedDate.getMonth()}-${selectedDate.getDate()}-${selectedDate.getFullYear()}`;
+  const onlyDate = format(selectedDate, "PP");
   const [title, settitle] = useState();
   const [services, setServices] = useState([]);
   const handleClick = (service) => {

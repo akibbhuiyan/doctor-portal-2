@@ -4,6 +4,8 @@ import { useForm } from "react-hook-form";
 import "./AppoinmentForm.css";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../Context/UserContext";
+import { format } from "date-fns";
+
 const customStyles = {
   content: {
     top: "50%",
@@ -25,14 +27,14 @@ const AppoinmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
   } = useForm();
   const onSubmit = (data) => {
     data.service = appointmentOn;
-    data.date = date.toLocaleDateString();
+    data.date = format(date, "PP");
     data.email = user?.email;
     data.created = new Date().toLocaleDateString();
+    console.log(data);
     fetch("https://doctor-portal2-server.vercel.app/addAppoinment", {
       method: "POST",
       headers: {
         "content-type": "application/json",
-        "Access-Control-Allow-Origin": "*",
       },
       body: JSON.stringify(data),
     })

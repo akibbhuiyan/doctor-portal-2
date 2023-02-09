@@ -47,17 +47,14 @@ const Navbar = (props) => {
               </li>
 
               <li className="nav-item">
-                <Link to="/Blog" className="nav-link me-5 mr-5 homeNavBlack">
+                <a href="#blogs" className="nav-link me-5 mr-5 homeNavBlack">
                   Blog
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link
-                  to="/Contact "
-                  className="nav-link me-5 mr-5 homeNavBlack"
-                >
+                <a href="#contact" className="nav-link me-5 mr-5 homeNavBlack">
                   Contact Us
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
                 {user ? (
