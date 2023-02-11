@@ -9,7 +9,6 @@ const AllPatients = () => {
       .then((res) => res.json())
       .then((data) => setAppointments(data));
   }, []);
-  console.log(appointments);
   return (
     <div className="container-fluid row">
       <Sidebar />

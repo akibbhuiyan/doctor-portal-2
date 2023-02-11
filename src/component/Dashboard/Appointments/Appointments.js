@@ -6,6 +6,8 @@ import "react-calendar/dist/Calendar.css";
 import moment from "moment";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { AuthContext } from "../../Context/UserContext";
+import { format } from "date-fns";
+
 const containerStyle = {
   backgroundColor: "#F4FDFB",
   height: "100%",
@@ -23,7 +25,7 @@ const AppoinmentforEach = () => {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
-        date: selectedDate.toLocaleDateString(),
+        date: format(selectedDate, "PP"),
         email: user?.email,
       }),
     })
