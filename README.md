@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+Admin Email:admin@admin.com
+Admin Pass:123456
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+Project Functionality :
 
-### `npm start`
+    User can register as Patinet .
+    User can login as admin.
+    Login user can report a product to admin, or book a product.
+    For booking a appointment user must fill the form in modal with additional information.
+    Make a private route where only patient,doctor,admin can access.
+    Booked appointment will show in  dashboard shorted by date. In dashboard buyer can delete booked products.
+    Create role and routes for only admin, patient and doctor.
+    Like AdminRoute where only admin can access. For securing server side API access create a admin middle-ware role.
+    And a Petient Where only Patient can access. And to secure server side API access create a seller middle-ware role.
+    Admin can also add a doctor with  information and upload a image that hosted on imageBB hosting service.
+    Petient can also delete Petient own booking in Petient dashboard.
+    Admin can view all Patinet and Doctors information. .
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Project Feature:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    This project use react.js as a front-end library.
+    And to add style and to make responsive used Bootstrap and React-Bootstrap component library.
+    Create a admin route feature for only admin can access.
+    Create a Petient route feature only seller can access.
+    react-query - used for fetching data from server and loading state and refetch
+    axios - Explore the use of axios and used to get server data.
+    date-fns - used to format the date.
+    firebase - as authentication service. And to host this website.
+    react-router-dom - Using react-router-dom make all the route for this project.
+    react-hook-form - Using get form values, show error message and some basic validation.
+    react-hot-toast - To show beautiful message for user.
+    react-icons - Used for site icon.
