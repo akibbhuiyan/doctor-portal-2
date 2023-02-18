@@ -36,9 +36,9 @@ function App() {
             </PrivateRoute>
           }
         />
-        <Route path="/doctor/appointment" element={<AppoinmentforEach />} />
-        <Route path="/doctor/patients" element={<AllPatients />} />
-        <Route path="/doctor/addDoctor" element={<AddDoctor />} />
+        <Route path="/doctor/appointment" element={ <PrivateRoute><AppoinmentforEach /></PrivateRoute>} />
+        <Route path="/doctor/patients" element={ <PrivateRoute><AllPatients /></PrivateRoute>} />
+        <Route path="/doctor/addDoctor" element={ <PrivateRoute><AddDoctor /></PrivateRoute>} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </>
