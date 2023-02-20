@@ -32,3 +32,5 @@
  - <code>react-hook-form</code> - Using get form values, show error message and some basic validation.
  - <code>react-hot-toast</code> - To show beautiful message for user.
  - <code>react-icons</code> - Used for site icon.
+
+## Thank You
