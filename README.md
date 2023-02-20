@@ -1,5 +1,5 @@
-Admin Email:admin@admin.com
-Admin Pass:123456
+-   Admin Email:admin@admin.com
+-   Admin Pass:123456
 
 ### Project live site [Doctos Portal](https://doctor-portal-2.vercel.app/).
 
